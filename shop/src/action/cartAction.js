@@ -1,9 +1,15 @@
-import { ADD_ITEM, DELETE_ITEM } from "./type";
+import { ADD_ITEM, DECREASE_ITEM, DELETE_ITEM } from "./type";
 
 function addItem(item){
     return{
         type : ADD_ITEM,
         payload : item
+    }
+}
+function decreaseItem(id){
+    return {
+        type: DECREASE_ITEM,
+        payload: id
     }
 }
 function deleteItem(id){
@@ -13,6 +19,6 @@ function deleteItem(id){
     }
 }
 
-export {addItem, deleteItem};
+export {addItem, deleteItem,decreaseItem};
 
 
